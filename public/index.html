@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar Tailwind CSS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body
+    class="bg-[url(./images/img1.jpg)] bg-cover bg-center h-screen text-white"
+  >
+    <header class="bg-[#FFFFFF30]">
+      <nav class="flex items-center justify-between px-12 h-16 lg:gap-8">
+        <a
+          href="#"
+          class="text-2xl font-bold border-2 px-2 py-1 whitespace-nowrap font-mono"
+          >Tailwind Anytime</a
+        >
+        <div
+          class="dropdown-menu absolute -top-full left-0 max-lg:bg-[#FFFFFF30] w-full flex flex-col gap-6 items-center py-2 text-lg font-bold lg:static lg:flex-row lg:justify-between font-mono"
+        >
+          <ul class="flex flex-col gap-4 items-center lg:flex-row lg:gap-8">
+            <li class="hover:text-orange-400">Home</li>
+            <li class="hover:text-orange-400 whitespace-nowrap">
+              Tailwind CSS Tips
+            </li>
+            <li class="hover:text-orange-400">Videos</li>
+            <li class="hover:text-orange-400">Blogs</li>
+            <li class="hover:text-orange-400">Courses</li>
+          </ul>
+          <div class="flex flex-col gap-6 items-center lg:flex-row lg:gap-8">
+            <button class="hover:text-orange-400">Login</button>
+            <button
+              class="bg-orange-400 rounded-lg px-2 py-1 whitespace-nowrap"
+            >
+              SignUp
+            </button>
+          </div>
+        </div>
+        <div class="toggle-button lg:hidden">
+          <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+        </div>
+      </nav>
+    </header>
+    <script>
+      const toggleBtn = document.querySelector(".toggle-button");
+      const dropdown = document.querySelector(".dropdown-menu");
+
+      toggleBtn.addEventListener("click", () => {
+        dropdown.classList.toggle("top-16");
+      });
+    </script>
+  </body>
+</html>
